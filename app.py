@@ -20,10 +20,10 @@ def recommend_book(book):
     return data
 
 st.header("Book Recommender System")
-popular = pickle.load(open('popular.pkl','rb'))
-books = pickle.load(open('books.pkl','rb'))
-pt = pickle.load(open('pt.pkl','rb'))
-similarity_score = pickle.load(open('similarity_score.pkl','rb'))
+popular = pd.read_pickle('popular.pkl','rb'))
+books = pd.read_pickle('books.pkl','rb'))
+pt = pd.read_pickle('pt.pkl','rb'))
+similarity_score = pd.read_pickle('similarity_score.pkl','rb'))
 
 book_list = pt.index.values
 image_url = popular['Image-URL-M'].tolist()
